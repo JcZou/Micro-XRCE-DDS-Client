@@ -1,4 +1,4 @@
-# Micro-XRCE_DDS-Client
+# Micro-XRCE-DDS-Client
 
 ## 1、Introduction
 
@@ -27,12 +27,12 @@ Apache license v2.0
 
 ## 2、How to Enable Micro-XRCE_DDS-Client
 
-Enable Micro-XRCE_DDS-Client package in menuconfig at the belowing path:
+Enable Micro-XRCE-DDS-Client package in menuconfig at the belowing path:
 
 ```
 RT-Thread online packages
     tools packages --->
-        [*] Micro-XRCE_DDS-Client
+        [*] Micro-XRCE-DDS-Client
 ```
 
 > To enable examples, add `MICRO_XRCE_DDS_CLIENT_USING_EXAMPLE` in rtconfig.h
