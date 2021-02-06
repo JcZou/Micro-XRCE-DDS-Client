@@ -6,6 +6,8 @@ eProsima Micro XRCE-DDS is an open-source wire protocol that implements the OMG 
 
 This repository is a package for RT-Thread which includes Micro XRCE-DDS Client library and provide the ROS2 topic public/subscribe ability.
 
+![Micro-ROS Architecture](./docs/figures/micro-ROS_architecture.png)
+
 ### 1.1 Content Architecture
 
 | Name | Description |
