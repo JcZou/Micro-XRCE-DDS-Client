@@ -1,0 +1,37 @@
+Import('rtconfig')
+from building import *
+
+cwd     = GetCurrentDir()
+
+# micro-xrce-dds-client
+src = Glob('c/core/log/*.c')
+src += Glob('c/core/serialization/*.c')
+src += Glob('c/core/session/*.c')
+src += Glob('c/core/session/stream/*.c')
+src += Glob('c/profile/transport/serial/serial_transport_external.c')
+src += Glob('c/profile/transport/serial/serial_transport.c')
+src += Glob('c/profile/transport/serial/serial_protocol.c')
+src += Glob('c/profile/transport/ip/udp/udp_transport_external.c')
+src += Glob('c/profile/transport/ip/udp/udp_transport.c')
+src += Glob('c/profile/transport/ip/tcp/tcp_transport_external.c')
+src += Glob('c/profile/transport/ip/tcp/tcp_transport.c')
+src += Glob('c/util/*.c')
+# ucdr
+src += Glob('ucdr/src/c/*.c')
+src += Glob('ucdr/src/c/types/*.c')
+
+CPPPATH = [cwd + '/../inc',
+	cwd + '/c/core/log',
+	cwd + '/c/core/serialization',
+	cwd + '/c/core/session',
+	cwd + '/c/core/session/stream',
+	cwd + '/c/profile/transport/serial',
+	cwd + '/c/profile/transport/ip/udp',
+	cwd + '/c/profile/transport/ip/tcp',
+	cwd + '/c/util',
+	cwd + '/ucdr/src/c',
+	cwd + '/ucdr/include']
+
+group = DefineGroup('Micro-XRCE-DDS-Client', src, depend = ['PKG_USING_MICRO_XRCE_DDS_CLIENT'], CPPPATH = CPPPATH)
+
+Return('group')

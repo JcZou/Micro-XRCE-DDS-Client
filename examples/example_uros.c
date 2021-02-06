@@ -188,6 +188,8 @@ static void uros_entry(void *arg)
     uxr_close_udp_transport(&transport);
 #endif
 
+    printf("Exit demo.\n");
+
     return;
 }
 
