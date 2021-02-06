@@ -37,10 +37,6 @@ RT-Thread online packages
 
 ## 3、Usage
 
-> 说明：在这里介绍 package 的移植步骤、使用方法、初始化流程、准备工作、API 等等，如果移植或 API 文档内容较多，可以将其独立至 `docs` 目录下。
-
-在打开 hello package 后，当进行 bsp 编译时，它会被加入到 bsp 工程中进行编译。
-
 * [eProsima Document](https://micro-xrce-dds.docs.eprosima.com/en/latest/)
 * [Micro-ROS Document](https://micro-ros.github.io/docs/concepts/middleware/Micro_XRCE-DDS/)
 * For more documemt, please check `doc` folder.
