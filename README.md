@@ -43,7 +43,7 @@ RT-Thread online packages
 
 ## 4、Notice
 
-> This package is only tested on ROS2 Fosy, for other ROS distribution is not tested.
+This package is only tested on ROS2 Foxy, for other ROS distribution is not tested.
 
 ## 5、Communication
 
