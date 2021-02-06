@@ -11,7 +11,7 @@ This repository is a package for RT-Thread which includes Micro XRCE-DDS Client 
 | Name | Description |
 | ---- | ---- |
 | docs  | Document folder |
-| examples | Example folder, which contains micro-ros ping-pong demo |
+| examples | Example folder |
 | inc  | Header folder |
 | src  | Source folder |
 
