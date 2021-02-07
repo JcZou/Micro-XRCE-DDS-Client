@@ -4,6 +4,6 @@ cwd     = GetCurrentDir()
 src     = Glob('*.c') + Glob('msgs/*.c') + Glob('*.cpp')
 CPPPATH = [cwd, cwd + '/msgs']
 
-group = DefineGroup('Micro-XRCE-DDS-Client', src, depend = ['MICRO_XRCE_DDS_CLIENT_USING_EXAMPLE'], CPPPATH = CPPPATH)
+group = DefineGroup('Micro-XRCE-DDS-Client', src, depend = ['MICRO_XRCE_DDS_CLIENT_USING_EXAMPLE'], LOCAL_CPPPATH = CPPPATH)
 
 Return('group')
