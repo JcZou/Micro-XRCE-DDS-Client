@@ -43,7 +43,7 @@ source install/local_setup.bash
 - 配置menuconfig使能Micro-XRCE-DDS-Client软件包并包含示例代码
 - pkgs --update获取软件包代码
 - 编译运行`bsp/qemu-vexpress-a9`
-- 在控制台输入uros_test指令
+- 在控制台输入`uros_test`指令
 - 如果成功将创建跟Micro-ROS Agent的连接，并等待/microROS/ping的消息
 - 在电脑上打开新的终端，输入如下指令监听/microROS/pong。注意这时还没有消息发过来，因为还未发送ping指令给Client
 ```
@@ -59,4 +59,43 @@ ros2 topic pub /microROS/ping std_msgs/msg/Header '{frame_id: "fake_ping"}'
 
 ## 示例结果 ##
 
-这是示例的结果。
+RTT控制台输出结果:
+```
+msh />uros_test
+Micro-ROS ping-pong demo.
+msh />Wait for ping topic
+Received topic: fake_ping, sec: 0
+Send pong topic: Hello RT-Thread!, sec: 120
+Received topic: fake_ping, sec: 0
+Send pong topic: Hello RT-Thread!, sec: 121
+Received topic: fake_ping, sec: 0
+Send pong topic: Hello RT-Thread!, sec: 122
+Received topic: fake_ping, sec: 0
+Send pong topic: Hello RT-Thread!, sec: 123
+```
+
+终端输出结果：
+```
+~/src/microros_ws$ ros2 topic echo /microROS/pong
+stamp:
+  sec: 120
+  nanosec: 450000000
+frame_id: Hello RT-Thread!
+---
+stamp:
+  sec: 121
+  nanosec: 450000000
+frame_id: Hello RT-Thread!
+---
+stamp:
+  sec: 122
+  nanosec: 450000000
+frame_id: Hello RT-Thread!
+---
+stamp:
+  sec: 123
+  nanosec: 450000000
+frame_id: Hello RT-Thread!
+---
+
+```
