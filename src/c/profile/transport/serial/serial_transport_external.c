@@ -1,6 +1,7 @@
 #include <uxr/client/profile/transport/serial/serial_transport_external.h>
 #include <uxr/client/profile/transport/serial/serial_transport_platform.h>
 #include <rtthread.h>
+#include <sys/types.h>
 
 // Place here your includes
 
